@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.RecordFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/recordToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back">
+
+        <TextView
+            android:id="@+id/record_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/employee_record"
+            android:textColor="@color/gray_900"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="138dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recordToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp">
+
+            <ImageView
+                android:id="@+id/recordProfileImg"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:contentDescription="@string/profile_image"
+                android:src="@drawable/ic_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_profile"
+                tools:srcCompat="@drawable/ic_profile" />
+
+            <TextView
+                android:id="@+id/recordIdLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/employee_id"
+                android:textAllCaps="false"
+                android:textColor="@color/gray_600"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordProfileImg" />
+
+            <TextView
+                android:id="@+id/recordIdValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/employee_id"
+                android:textColor="@color/gray_900"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/recordIdLabel"
+                app:layout_constraintTop_toBottomOf="@+id/recordIdLabel" />
+
+            <TextView
+                android:id="@+id/recordForenameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/forename"
+                android:textAllCaps="false"
+                android:textColor="@color/gray_600"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordIdValue" />
+
+            <TextView
+                android:id="@+id/recordForenameValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/forename"
+                android:textColor="@color/gray_900"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/recordForenameLabel"
+                app:layout_constraintTop_toBottomOf="@+id/recordForenameLabel" />
+
+            <TextView
+                android:id="@+id/recordSurnameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/surname"
+                android:textAllCaps="false"
+                android:textColor="@color/gray_600"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordForenameValue" />
+
+            <TextView
+                android:id="@+id/recordSurnameValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:lineSpacingExtra="4sp"
+                android:text="@string/surname"
+                android:textColor="@color/gray_900"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/recordSurnameLabel"
+                app:layout_constraintTop_toBottomOf="@+id/recordSurnameLabel" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recordSurnameValue" />
+
+            <Button
+                android:id="@+id/editRecordButton"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/edit_record"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/deleteRecordButton"
+                app:layout_constraintEnd_toEndOf="@+id/deleteRecordButton"
+                app:layout_constraintStart_toStartOf="@+id/deleteRecordButton"
+                app:layout_constraintTop_toBottomOf="@+id/divider5" />
+
+            <Button
+                android:id="@+id/deleteRecordButton"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/delete_record"
+                android:textAllCaps="false"
+                android:textColor="@color/red_600"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

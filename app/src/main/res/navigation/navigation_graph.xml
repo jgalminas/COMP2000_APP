@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.comp2000.fragments.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_HomeToAccount"
+            app:destination="@id/accountFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_HomeToHolidays"
+            app:destination="@id/holidaysFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_HomeToRecords"
+            app:destination="@id/recordsFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.comp2000.fragments.AccountFragment"
+        android:label="Account"
+        tools:layout="@layout/fragment_account"/>
+    <fragment
+        android:id="@+id/holidaysFragment"
+        android:name="com.example.comp2000.fragments.HolidaysFragment"
+        android:label="fragment_holidays"
+        tools:layout="@layout/fragment_holidays" >
+        <action
+            android:id="@+id/action_toHolidayRequest"
+            app:destination="@id/holidayRequestFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/holidayRequestFragment"
+        android:name="com.example.comp2000.fragments.HolidayRequestFragment"
+        android:label="fragment_holiday_request"
+        tools:layout="@layout/fragment_holiday_request">
+        <argument
+            android:name="holidayIndex"
+            app:argType="integer"
+            android:defaultValue="0"/>
+    </fragment>
+    <fragment
+        android:id="@+id/recordsFragment"
+        android:name="com.example.comp2000.fragments.RecordsFragment"
+        android:label="fragment_records"
+        tools:layout="@layout/fragment_records" >
+        <action
+            android:id="@+id/action_toEmployeeRecord"
+            app:destination="@id/recordFragment" />
+        <action
+            android:id="@+id/action_addRecord"
+            app:destination="@id/addRecordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordFragment"
+        android:name="com.example.comp2000.fragments.RecordFragment"
+        android:label="fragment_record"
+        tools:layout="@layout/fragment_record">
+        <argument
+            android:name="employeeIndex"
+            app:argType="integer"
+            android:defaultValue="0"/>
+        <action
+            android:id="@+id/action_editRecord"
+            app:destination="@id/addRecordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRecordFragment"
+        android:name="com.example.comp2000.fragments.AddRecordFragment"
+        android:label="fragment_add_record"
+        tools:layout="@layout/fragment_add_record">
+        <argument
+            android:name="isEditing"
+            app:argType="boolean"
+            android:defaultValue="false"/>
+        <argument
+            android:name="employeeIndex"
+            app:argType="integer"
+            android:defaultValue="0"/>
+    </fragment>
+</navigation>

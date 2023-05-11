@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AddRecordFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/addRecordToolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/addRecordToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/new_record"
+            android:textColor="@color/gray_900"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="123dp"
+            tools:layout_editor_absoluteY="37dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/addRecordToolbar"
+        tools:layout_editor_absoluteX="-16dp">
+
+        <TextView
+            android:id="@+id/addRecordIdLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/employee_id"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_600"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/addRecordIdValue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:autofillHints=""
+            android:background="@drawable/edittext_background"
+            android:hint="@string/employee_id"
+            android:inputType="number"
+            android:paddingHorizontal="12dp"
+            android:paddingTop="4dp"
+            android:singleLine="true"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/gray_900"
+            android:textColorHint="@color/gray_500" />
+
+        <TextView
+            android:id="@+id/addRecordNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_600"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/addRecordNameValue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:autofillHints=""
+            android:background="@drawable/edittext_background"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:paddingHorizontal="12dp"
+            android:paddingTop="4dp"
+            android:singleLine="true"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/gray_900"
+            android:textColorHint="@color/gray_500" />
+
+        <TextView
+            android:id="@+id/addRecordSurnameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/surname"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_600"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/addRecordSurnameValue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:autofillHints=""
+            android:background="@drawable/edittext_background"
+            android:hint="@string/surname"
+            android:inputType="text"
+            android:paddingHorizontal="12dp"
+            android:paddingTop="4dp"
+            android:singleLine="true"
+            android:layout_marginBottom="40dp"
+            android:textColor="@color/gray_900"
+            android:textColorHint="@color/gray_500" />
+
+        <TextView
+            android:id="@+id/addRecordErrorMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textColor="@color/red_600"
+            android:layout_marginBottom="10dp"
+            android:textSize="16sp"
+            android:text="@string/empty"/>
+
+        <Button
+            android:id="@+id/addRecordSubmitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/addRecordCancelBtn"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_700"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
