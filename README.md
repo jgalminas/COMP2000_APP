@@ -1,6 +1,6 @@
 # Employee Management Application
 
-https://user-images.githubusercontent.com/63853949/212945596-556dd2ff-a012-431f-883f-9d431e5abe2d.mp4
+https://github.com/jgalminas/COMP2000_APP/assets/63853949/89f7874f-b95b-455f-807c-678095f61b9a
 
 ## Background
 
